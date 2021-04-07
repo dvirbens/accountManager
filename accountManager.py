@@ -6,7 +6,7 @@ from os import path
 
 
 ##database init
-cluster= MongoClient("mongodb+srv://dvirbens:bmth2506@dvirbens.d7gwq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+cluster= MongoClient("mongodb+srv://dvirbens:<password>@dvirbens.d7gwq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 db=cluster["spreadApp"]
 collection=db["Users"]
 
