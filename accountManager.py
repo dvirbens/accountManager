@@ -59,7 +59,7 @@ def login_func(username,password):
         label_mass=Label(login_screen,text="User not found",width=20,fg="red").grid(row=3,column=0,columnspan=2,padx=10,pady=5)
 
 
-## the mangger manu
+##  Manager manu
 def manu_manager():
     menu_screen=Toplevel()
     menu_screen.title=("Account Manager")
@@ -77,7 +77,7 @@ def manu_manager():
 
 ### Delete account Scene ####
 
-#delete account screen
+#Delete account screen
 def delete_account():
     global delete_screen
     delete_screen=Toplevel()
@@ -90,7 +90,7 @@ def delete_account():
     delete_button=Button(delete_screen,width=15,text="Delete",command= lambda: delete_func(e.get())).pack()
 
 
-#delete account function - delete an existing account from database.
+#Delete account function - delete an existing account from database.
 def delete_func(user):
     res= collection.find_one({"user_name":user})
     if res:
@@ -104,7 +104,7 @@ def delete_func(user):
 
 ### Create account Scene ####
 
-#create account screen
+#Create account screen
 def create_account():
     global create_screen
     create_screen=Toplevel()
@@ -134,7 +134,7 @@ def create_account():
     sumbit_button.grid(row=4,column=0,columnspan=2,padx=10,pady=5)
 
 
-#create account function - adding the new account to the database.
+#Create account function - adding the new account to the database.
 def create_func(username,password,accses):
     res=collection.find_one({"user_name":username})
     if res:
@@ -167,7 +167,7 @@ def change_user():
         Label(changeUser_screen,text="User not found",fg="red").grid(row=1,column=0,columnspan=2)    
 
 
-
+# get users function- prints all the users and thir info to the system.
 def get_users():
     usersinfo_screen=Toplevel()
     usersinfo_screen.title=("Account Manager")
